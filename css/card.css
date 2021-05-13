@@ -1,0 +1,160 @@
+body {
+  background-color: rgb(211, 244, 240);
+  padding: 5em;
+}
+.card {
+  margin: auto;
+  width: 400px;
+  height: 700px;
+  border: 1px solid lightgrey;
+  border-radius: 30px;
+  background-image: url("../img/crossland-spring.png");
+  background-size: cover;
+  position: relative;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.card:hover {
+  opacity: 0.85;
+}
+.card__description {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: whitesmoke;
+  transition: margin-top 3s;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+@keyframes example {
+  from {
+    margin-top: 300px;
+  }
+  to {
+    margin-top: 180px;
+  }
+}
+.card:hover .card__description {
+  animation-name: example;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes extension {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.card:hover h1:after {
+  animation: extension 0.5s 1 linear;
+  width: 70%;
+}
+
+@keyframes appear {
+  from {
+    margin-top: 600px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 320px;
+    opacity: 1;
+  }
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  width: 10%;
+  height: 2px;
+  margin: 20px auto;
+  border: 0;
+  background: hsl(78, 60%, 57%);
+}
+.card__details {
+  width: 80%;
+  height: 0;
+  margin-top: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: whitesmoke;
+  opacity: 0;
+  position: absolute;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.card:hover .card__details {
+  opacity: 1;
+  animation: appear 1s forwards;
+}
+
+.btn {
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  z-index: 10px;
+  box-shadow: 2px 2px 2px grey;
+  padding: 5px;
+}
+a {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.footnotes {
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  color: whitesmoke;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 660px;
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  color: rgb(243, 255, 105);
+}
+
+a:active {
+  color: rgb(255, 60, 0);
+}
